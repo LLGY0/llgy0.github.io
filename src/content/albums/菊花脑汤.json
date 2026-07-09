@@ -1,0 +1,18 @@
+{
+    "title": "菊花脑汤",
+    "description": "南京的一种野菜，弄成汤后有点苦苦的但是回甘，超好喝。注意，不能加蛋，加蛋后汤色变的没那么墨绿，且味道没有纯正野菜的感觉",
+    "cover": "https://qcloud.dpfile.com/pc/nlK900KRhR5tZlSTSo0SiA6JgEtz9HEkYsaFuj_NZjhwXE-ox-OAeaYLuicbbAC4Y0q73sB2DyQcgmKUxZFQtw.jpg",
+    "tags": ["菜品"],
+    "layout": "grid",
+    "columns": 3,
+    "photos": [
+        {
+            "src": "",
+            "alt": "",
+            "title": "",
+            "description": "",
+            "tags": [""]
+        }
+    ],
+    "visible": true
+}
