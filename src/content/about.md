@@ -6,7 +6,7 @@ I am garbage
 
 学习：Fluent/Mike、分子动力学模型、DFT理论计算、HTML5、GiffGaff
 
-品鉴：海市蜃楼之馆、海猫鸣泣之时、兰斯10、水仙 1 + 2、樱之诗、樱之刻、死馆、时钟机关的leyline、黄昏禁忌之药、PURE×CONNECT、Clover Day's、type help、her story、疑案追声、根树已死、sethian、Viewfinder.
+品鉴：海市蜃楼之馆、海猫鸣泣之时、兰斯10、水仙 1 + 2、樱之诗、樱之刻、死馆、时钟机关的leyline、黄昏禁忌之药、her story、疑案追声、根树已死、sethian、Viewfinder、G弦上的魔王、初音岛
 
 养老后游玩：模拟人生4全DLC、城市天际线2（建南京）、戴森球计划（100W白糖）
 
