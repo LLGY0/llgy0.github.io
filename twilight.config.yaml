@@ -418,7 +418,7 @@ musicPlayer:
         # 类型 ("playlist" 歌单 | "song" 单曲)
         type: "playlist"
         # 资源 ID
-        id: "17895929084"
+        id: "485424063"
     # local 模式专属配置
     local:
         # 播放列表
@@ -427,13 +427,13 @@ musicPlayer:
                 # 序号
                 id: 1
                 # 标题
-                title: "Neighborhood"
+                title: "火与尘"
                 # 作者
-                artist: "Sim2"
+                artist: "Arknights"
                 # 封面
-                cover: "assets/music/Neighborhood.png"
+                cover: "assets/music/火与尘.jpg"
                 # 音乐路径
-                url: "assets/music/Neighborhood.mp3"
+                url: "assets/music/火与尘.mp3"
                 # 歌词路径
                 # lrc: "assets/music/End of Days.lrc"
                 # 时长
@@ -472,15 +472,15 @@ musicPlayer:
                 # 序号
                 id: 4
                 # 标题
-                title: "天狼星的心脏"
+                title: "ユラリユレル"
                 # 作者
-                artist: "异世界情绪"
+                artist: "NOMELON NOLEMON"
                 # 封面
-                cover: "assets/music/天狼星的心脏.jpg"
+                cover: "assets/music/向日葵马戏团.jpg"
                 # 音乐路径
-                url: "assets/music/天狼星的心脏.mp3"
+                url: "assets/music/向日葵马戏团.mp3"
                 # 歌词路径
-                lrc: "assets/music/天狼星的心脏.lrc"
+                lrc: "assets/music/向日葵马戏团.lrc"
                 # 时长
                 # duration: 146                
             - # 列表示例
@@ -542,9 +542,24 @@ musicPlayer:
                 # 歌词路径
                 lrc: "assets/music/生命换装.lrc"
                 # 时长
-                # duration: 146                                   
+                # duration: 146
+            - # 列表示例
+                # 序号
+                id: 9
+                # 标题
+                title: "青のすみか"
+                # 作者
+                artist: "millsage"
+                # 封面
+                cover: "assets/music/qing.png"
+                # 音乐路径
+                url: "assets/music/qing.mp3"
+                # 歌词路径
+                lrc: "assets/music/qing.lrc"
+                # 时长
+                # duration: 146                
     # 是否自动播放
-    autoplay: false
+    autoplay: true
 
 # 看板娘配置
 pio:
