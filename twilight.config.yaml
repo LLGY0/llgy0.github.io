@@ -222,6 +222,9 @@ sidebar:
                 type: "directory"
                 # 位置策略 ("top" 顶部固定 | "sticky" 粘性)
                 position: "sticky"
+                visibility:
+                  mode: "exclude"
+                  paths: ["^/posts/"]
             - # 组件 - 文章类别 (预设)
                 # 类型
                 type: "categories"
@@ -233,6 +236,9 @@ sidebar:
                     collapseThreshold: 5
                 # 目录深度
                 depth: 3
+                visibility:
+                  mode: "exclude"
+                  paths: ["^/posts/"]
             - # 组件 - 文章标签 (预设)
                 # 类型
                 type: "tags"
@@ -242,6 +248,9 @@ sidebar:
                 responsive:
                     # 折叠阈值
                     collapseThreshold: 20
+                visibility:
+                  mode: "exclude"
+                  paths: ["^/posts/"]
         # 右侧侧边栏
         right:
             - # 组件 - 公告 (预设)

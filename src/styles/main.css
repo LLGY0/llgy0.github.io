@@ -200,36 +200,6 @@
     & .btn-card {
     @apply bg-(--card-bg-transparent);
     }
-
-    & ~ * .music-player .mini-player {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-
-    & ~ * .music-player .expanded-player {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-
-    & ~ * .music-player .playlist-panel {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-
-    & body .music-player .mini-player {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-
-    & body .music-player .expanded-player {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-
-    & body .music-player .playlist-panel {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
 }
 
 @utility dropdown-content {
@@ -274,74 +244,6 @@
         active:bg-(--btn-card-bg-active);
     &.disabled {
     @apply pointer-events-none text-black/10 dark:text-white/10;
-    }
-}
-
-@utility music-player {
-    .wallpaper-transparent ~ * & .mini-player {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-
-    .wallpaper-transparent ~ * & .expanded-player {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-
-    .wallpaper-transparent ~ * & .playlist-panel {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-
-    body.wallpaper-transparent & .mini-player {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-
-    body.wallpaper-transparent & .expanded-player {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-
-    body.wallpaper-transparent & .playlist-panel {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-}
-
-@utility mini-player {
-    .wallpaper-transparent ~ * .music-player & {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-
-    body.wallpaper-transparent .music-player & {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-}
-
-@utility expanded-player {
-    .wallpaper-transparent ~ * .music-player & {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-
-    body.wallpaper-transparent .music-player & {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-}
-
-@utility playlist-panel {
-    .wallpaper-transparent ~ * .music-player & {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
-    }
-
-    body.wallpaper-transparent .music-player & {
-    background-color: var(--card-bg-transparent) !important;
-    backdrop-filter: blur(8px) !important;
     }
 }
 

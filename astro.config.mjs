@@ -35,19 +35,29 @@ import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 
 
-// Choose adapter depending on deployment environment
-const adapter = process.env.GITHUB_ACTIONS
-    ? undefined
-    : (process.env.CF_PAGES
-        ? cloudflarePages()
-        : (process.env.NETLIFY
-            ? netlify()
-            : (process.env.EDGEONE
-                ? edgeone()
-                : vercel({ mode: "serverless" })
-            )
-        )
-    );
+// ---------------------------------------------------------------------------
+// 部署目标：本地与 CI 同构
+//   口径统一在 scripts/platform.mjs —— 只有真实平台构建环境变量（CF_PAGES /
+//   NETLIFY / EDGEONE / VERCEL）存在时才启用对应 adapter；本地 `pnpm build` 与
+//   GitHub Actions 一律走纯静态，产物落 dist/。
+//   以前这里判断 GITHUB_ACTIONS：CI 是纯静态（dist/），本地却落到 vercel
+//   serverless（.vercel/output/static），导致本地验证不了线上构建。
+// ---------------------------------------------------------------------------
+import { detectPlatform, describePlatform } from "./scripts/platform.mjs";
+
+const platform = detectPlatform();
+
+const adapter = platform === "cloudflare"
+    ? cloudflarePages()
+    : platform === "netlify"
+        ? netlify()
+        : platform === "edgeone"
+            ? edgeone()
+            : platform === "vercel"
+                ? vercel({ mode: "serverless" })
+                : undefined;
+
+console.log(describePlatform(platform));
 
 // Ref: https://astro.build/config
 export default defineConfig({
