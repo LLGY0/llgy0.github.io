@@ -35,7 +35,7 @@ fcpe:  性能需求低，速度快，效果还不错
 
 so-vits-svc 4.1 的 44k 模型 + 浅扩散，batch 12 时显存约 18～20 GB。batch 16 会贴到 22 GB 以上，随时可能 OOM。24 GB 卡跑 batch 12 是最舒服的位置。
 
-# 1.0 速查代码
+## 速查代码
 ```bash
 目录
 cd /root/autodl-tmp/workdir/so-vits-svc
@@ -56,7 +56,7 @@ python inference_main.py -m "logs/44k/G_40000.pth" -c "configs/config.json" \
 独立扩散（4.0）
 python diffusion/diffusion.py -c configs/diffusion.yaml
 ```
-# 2.0 提人声
+# 1.0 提人声
 （部分教程使用UVR5或Spleeter进行人声提取，可做为备选方案，参考：https://blog.csdn.net/c858845275/article/details/145998322） （参考2：https://zhuanlan.zhihu.com/p/630115251）
 切片工具audio-slicer。第一部分是分离背景音和人声，第二步是进行音频分割。项目地址：https://github.com/ZFTurbo/Music-Source-Separation-Training及webui项目地址：https://github.com/SUC-DriverOld/MSST-WebUI
 工具链接：https://github.com/flutydeer/audio-slicer 
@@ -64,7 +64,7 @@ Step 1:Running inference using big_betase.ckpt
 Step 2: Running inference using model_mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956.ckpt
 Step 3: Running inference using dereverb_mel_band_roformer_less_aggressive_anvuew_sdr_18.8o5o.ckpt
 
-# 3.0 进行数据集的重采样；选训练使用的特征编码器和f0预测器；配置文件修改
+# 2.0 进行数据集的重采样；选训练使用的特征编码器和f0预测器；配置文件修改
 配置文件存放在config文件夹，名为config.json
 扩散模型的配置文件默认就行,如需查看参数，请见/config_template/diffusion_template.yaml
 all_in_mem,cache_all_data：加载所有数据集到内存中，硬盘IO过于低下、同时内存容量 远大于 数据集体积时可以启用(可以较大的提升训练速度)
@@ -97,7 +97,7 @@ f0预测器
 %cd /root/autodl-tmp/workdir/so-vits-svc
 !python train_diff.py -c configs/diffusion.yaml 
 
-# 4.0 训练
+# 3.0 训练
 ## 关键指标
 
 | 曲线 | 全称 | 意义 | 数值范围 |
@@ -220,7 +220,7 @@ kl 平 + mel 降  → 少见但也好
 
 **本次最终选了 `batch 12 + lr 1.2e-4`——比表里的推荐值低，故意保守。
 
-# 5.0 推理
+# 4.0 推理
 
 使用webui进行推理,也可以进行训练，不过用笔记本会多两个编码器
 运行后会生成两条链接，一条是本地端口6006，通过自定义服务访问或者通过ssh隧道访问(强烈建议通过ssh隧道，关于如何使用请看 BV1oh4y1n7Nv )
@@ -269,7 +269,7 @@ python inference_main.py \
 | **切片阈值** | -50 | -50 | |
 | **聚类混合比** | 0 | 0 | 单说话人没有聚类模型 |
 
-# 6.0 扩散模型相关
+# 5.0 扩散模型相关
 ## 关键参数
 | 参数 | 值 | 意义 |
 |---|---|---|
