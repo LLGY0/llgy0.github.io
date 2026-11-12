@@ -1,7 +1,7 @@
 ---
 import "katex/dist/katex.css";
 
-import { siteConfig, profileConfig, musicPlayerConfig, pioConfig } from "@/config";
+import { siteConfig, profileConfig, musicPlayerConfig } from "@/config";
 import { getAnalyticsConfig } from "@utils/analytics";
 import type { Favicon } from "@/types/config";
 import { defaultFavicons } from "@constants/icon";
@@ -20,7 +20,6 @@ import FontLoader from "@components/fontLoader.astro";
 import LoadingOverlay from "@components/loadingOverlay.astro";
 import ConfigCarrier from "@components/configCarrier.astro";
 import MusicPlayer from "@components/musicPlayer.svelte";
-import Pio from "@components/pio.svelte";
 import "@styles/navbar.css";
 import "@styles/banner.css";
 import "@styles/fancybox.css";
@@ -212,8 +211,6 @@ const { enabled: analyticsEnabled, code: analyticsCode } = getAnalyticsConfig();
         }}></style>
         <!-- custom head -->
         <slot name="head"></slot>
-        <!-- Pio 看板娘样式 - 仅在启用时加载 -->
-        {pioConfig.enable && <link rel="stylesheet" href="/pio/static/pio.css" />}
         <!-- rss feed -->
         <link rel="alternate" type="application/rss+xml" title={profileConfig.name} href={`${Astro.site}rss.xml`}/>
     </head>
@@ -232,8 +229,6 @@ const { enabled: analyticsEnabled, code: analyticsCode } = getAnalyticsConfig();
         {analyticsEnabled && analyticsCode && <Fragment set:html={analyticsCode} />}
         <!-- Music Player - 仅在启用时加载 -->
         {musicPlayerConfig.enable && <MusicPlayer client:idle />}
-        <!-- Pio 看板娘组件 - 如果启用了侧边栏，可能需要调整 z-index -->
-        {pioConfig.enable && <Pio client:visible />}
         <!-- increase the page height during page transition to prevent the scrolling animation from jumping -->
         <div id="page-height-extend" class="hidden h-[300vh]"></div>
     </body>

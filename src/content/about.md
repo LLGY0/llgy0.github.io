@@ -12,4 +12,3 @@ I am garbage
 
 更新：Arcgis 克里金；Rhino+Grasshopper实现3D GIS构图；Alluvial Diagram 可视化多个变量交叉分布；
 
-疑问：

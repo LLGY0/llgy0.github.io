@@ -314,7 +314,7 @@ announcement:
     # 公告标题
     title: "公告栏"
     # 公告内容
-    content: "我爱吃屎！！  pnpm dev   pnpm build   pnpm install"
+    content: "pnpm dev   pnpm build   pnpm install"
     # 允许用户关闭公告
     closable: false
     # 链接配置
@@ -559,42 +559,4 @@ musicPlayer:
                 # 时长
                 # duration: 146                
     # 是否自动播放
-    autoplay: true
-
-# 看板娘配置
-pio:
-    # 启用看板娘
-    enable: false
-    # 模型文件路径
-    models:
-        - "/pio/models/pio/model.json"
-    # 看板娘位置
-    position: "left"
-    # 看板娘宽度
-    width: 280
-    # 看板娘高度
-    height: 250
-    # 展现模式
-    mode: "draggable"
-    # 是否在移动设备上隐藏
-    hiddenOnMobile: true
-    # 对话框配置
-    dialog:
-        # 欢迎词
-        welcome: "Welcome!"
-        # 触摸提示
-        touch:
-            - "What are you doing?"
-            - "Stop touching me!"
-            - "Don't bully me like that!"
-            - "(｡í _ ì｡)"
-        # 首页提示
-        home: "Click here to go back to homepage!"
-        # 换装提示
-        skin:
-            - "Want to see my new outfit?"
-            - "The new outfit looks great~"
-        # 关闭提示
-        close: "See you next time~"
-        # 关于链接
-        link: "https://nav.kungal.org"
+    autoplay: false

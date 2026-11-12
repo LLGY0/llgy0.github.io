@@ -12,7 +12,6 @@ import type {
     FooterConfig,
     ParticleConfig,
     MusicPlayerConfig,
-    PioConfig,
 } from "./types/config";
 import { LinkPreset } from "./types/config";
 import rawConfig from "../twilight.config.yaml?raw";
@@ -31,7 +30,6 @@ type ConfigFile = {
     footer: FooterConfig;
     particle: ParticleConfig;
     musicPlayer: MusicPlayerConfig;
-    pio: PioConfig;
 };
 
 const config = yaml.load(rawConfig) as ConfigFile;
@@ -121,6 +119,3 @@ export const particleConfig: ParticleConfig = config.particle;
 
 // 音乐播放器配置
 export const musicPlayerConfig: MusicPlayerConfig = config.musicPlayer;
-
-// 看板娘配置
-export const pioConfig: PioConfig = config.pio;
