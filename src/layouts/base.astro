@@ -1,7 +1,7 @@
 ---
 import "katex/dist/katex.css";
 
-import { siteConfig, profileConfig, musicPlayerConfig } from "@/config";
+import { siteConfig, profileConfig } from "@/config";
 import { getAnalyticsConfig } from "@utils/analytics";
 import type { Favicon } from "@/types/config";
 import { defaultFavicons } from "@constants/icon";
@@ -19,7 +19,6 @@ import { pathsEqual, url } from "@utils/url";
 import FontLoader from "@components/fontLoader.astro";
 import LoadingOverlay from "@components/loadingOverlay.astro";
 import ConfigCarrier from "@components/configCarrier.astro";
-import MusicPlayer from "@components/musicPlayer.svelte";
 import "@styles/navbar.css";
 import "@styles/banner.css";
 import "@styles/fancybox.css";
@@ -124,8 +123,6 @@ const { enabled: analyticsEnabled, code: analyticsCode } = getAnalyticsConfig();
     <head>
         <meta charset="UTF-8" />
         <!-- Resource Preconnect -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://code.iconify.design">
         <!-- Font Loader -->
         <FontLoader />
@@ -227,8 +224,6 @@ const { enabled: analyticsEnabled, code: analyticsCode } = getAnalyticsConfig();
         <slot />
         <!-- Analytics -->
         {analyticsEnabled && analyticsCode && <Fragment set:html={analyticsCode} />}
-        <!-- Music Player - 仅在启用时加载 -->
-        {musicPlayerConfig.enable && <MusicPlayer client:idle />}
         <!-- increase the page height during page transition to prevent the scrolling animation from jumping -->
         <div id="page-height-extend" class="hidden h-[300vh]"></div>
     </body>

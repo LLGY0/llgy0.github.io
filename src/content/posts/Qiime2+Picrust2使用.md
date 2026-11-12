@@ -3,7 +3,7 @@ title: Qiime2+Picrust2使用
 published: 2026-04-21
 updated: 2026-04-21
 description: 记录生信分析相关操作
-cover: cover/C2.png
+cover: cover/C2.webp
 category:
   - Study
 tags:

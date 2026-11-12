@@ -36,7 +36,7 @@ site:
         # 示例字体配置 - Zen Maru Gothic
         "Noto Sans SC":
             # 字体源 (字体 CSS 链接 | 字体文件路径)
-            src: "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Zen+Kaku+Gothic+New&display=swap"
+            src: "/fonts/noto-sans-sc.css"
             # 字体名 (font-family)
             family: "Noto Sans SC"
     # 主题色配置
@@ -53,19 +53,16 @@ site:
         src:
             # 桌面壁纸图片 (相对于 /public 目录; 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
             desktop:
-                - "/assets/images/B1.jpg"
-                - "/assets/images/B2.jpg"
-                - "/assets/images/B4.jpg"            
+                - "/assets/images/B1.webp"         
             # 移动壁纸图片 (相对于 /public 目录; 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
             mobile:
-                - "/assets/images/mobileWallpaper_1.jpg"
-                - "/assets/images/mobileWallpaper_2.jpg"
+                - "/assets/images/mobileWallpaper_1.webp"
         # 壁纸位置 ('top' | 'center' | 'bottom')
         position: "center"
         # 轮播配置 (fullscreen 和 banner 模式共享)
         carousel:
-            # 为多张图片启用轮播，否则随机显示一张图片
-            enable: true
+            # 为多张图片启用轮播，否则只显示首张（false = 只下载首张，首屏更快）
+            enable: false
             # 轮播间隔时间 (秒)
             interval: 3.6
             # 启用 Ken Burns 效果
@@ -132,7 +129,7 @@ site:
             # 是否启用加载标题
             enable: true
             # 加载标题文本
-            content: "少 女 祈 祷 中 ~ LOADING ~ "
+            content: "少 女 祈 祷 中 ~ L O A D I N G ~ "
             # 动画周期 (s)
             interval: 1.5
         # 加载动画配置
@@ -339,7 +336,7 @@ post:
     # 许可证配置
     license:
         # 启用许可证
-        enable: false
+        enable: true
         # 许可证名称
         name: "CC BY-NC-SA 4.0"
         # 许可证链接
@@ -347,7 +344,7 @@ post:
     # 评论配置
     comment:
         # 启用评论功能
-        enable: false
+        enable: true
         # Twikoo 评论系统配置
         twikoo:
             # 环境 ID
@@ -402,161 +399,3 @@ particle:
         fadeSpeed: 0.12
     # 粒子层级
     zIndex: 100
-
-# 音乐播放器配置
-musicPlayer:
-    # 启用音乐播放器功能
-    enable: true
-    # 默认模式 ("meting" API | "local" 本地)
-    mode: "local"
-    # meting 模式专属配置
-    meting:
-        # Meting API 地址
-        meting_api: "https://meting.spr-aachen.com/api"
-        # 音乐平台
-        server: "netease"
-        # 类型 ("playlist" 歌单 | "song" 单曲)
-        type: "playlist"
-        # 资源 ID
-        id: "485424063"
-    # local 模式专属配置
-    local:
-        # 播放列表
-        playlist:
-            - # 列表示例
-                # 序号
-                id: 1
-                # 标题
-                title: "火与尘"
-                # 作者
-                artist: "Arknights"
-                # 封面
-                cover: "assets/music/火与尘.jpg"
-                # 音乐路径
-                url: "assets/music/火与尘.mp3"
-                # 歌词路径
-                # lrc: "assets/music/End of Days.lrc"
-                # 时长
-                # duration: 146          
-            - # 列表示例
-                # 序号
-                id: 2
-                # 标题
-                title: "雲雀"
-                # 作者
-                artist: "ASCA"
-                # 封面
-                cover: "assets/music/雲雀.png"
-                # 音乐路径
-                url: "assets/music/雲雀.mp3"
-                # 歌词路径
-                lrc: "assets/music/雲雀.lrc"
-                # 时长
-                # duration: 146
-            - # 列表示例
-                # 序号
-                id: 3
-                # 标题
-                title: "夏霞"
-                # 作者
-                artist: "あたらよ"
-                # 封面
-                cover: "assets/music/夏霞.png"
-                # 音乐路径
-                url: "assets/music/夏霞.mp3"
-                # 歌词路径
-                lrc: "assets/music/夏霞.lrc"
-                # 时长
-                # duration: 146
-            - # 列表示例
-                # 序号
-                id: 4
-                # 标题
-                title: "ユラリユレル"
-                # 作者
-                artist: "NOMELON NOLEMON"
-                # 封面
-                cover: "assets/music/向日葵马戏团.jpg"
-                # 音乐路径
-                url: "assets/music/向日葵马戏团.mp3"
-                # 歌词路径
-                lrc: "assets/music/向日葵马戏团.lrc"
-                # 时长
-                # duration: 146                
-            - # 列表示例
-                # 序号
-                id: 5
-                # 标题
-                title: "End of Days"
-                # 作者
-                artist: "ReoNa"
-                # 封面
-                cover: "assets/music/End of Days.jpg"
-                # 音乐路径
-                url: "assets/music/End of Days.mp3"
-                # 歌词路径
-                lrc: "assets/music/End of Days.lrc"
-                # 时长
-                # duration: 146    
-            - # 列表示例
-                # 序号
-                id: 6
-                # 标题
-                title: "カラオケ"
-                # 作者
-                artist: "交响乐之雨"
-                # 封面
-                cover: "assets/music/secret.jpg"
-                # 音乐路径
-                url: "assets/music/secret.mp3"
-                # 歌词路径
-                lrc: "assets/music/secret.lrc"
-                # 时长
-                # duration: 146  
-            - # 列表示例
-                # 序号
-                id: 7
-                # 标题
-                title: "Running In The Dark"
-                # 作者
-                artist: "Arknights"
-                # 封面
-                cover: "assets/music/Running In The Dark.jpg"
-                # 音乐路径
-                url: "assets/music/Running In The Dark.mp3"
-                # 歌词路径
-                lrc: "assets/music/Running In The Dark.lrc"
-                # 时长
-                # duration: 146     
-            - # 列表示例
-                # 序号
-                id: 8
-                # 标题
-                title: "生命换装"
-                # 作者
-                artist: "Arknights"
-                # 封面
-                cover: "assets/music/生命换装.jpg"
-                # 音乐路径
-                url: "assets/music/生命换装.mp3"
-                # 歌词路径
-                lrc: "assets/music/生命换装.lrc"
-                # 时长
-                # duration: 146
-            - # 列表示例
-                # 序号
-                id: 9
-                # 标题
-                title: "青のすみか"
-                # 作者
-                artist: "millsage"
-                # 封面
-                cover: "assets/music/qing.png"
-                # 音乐路径
-                url: "assets/music/qing.mp3"
-                # 歌词路径
-                lrc: "assets/music/qing.lrc"
-                # 时长
-                # duration: 146                
-    # 是否自动播放
-    autoplay: false

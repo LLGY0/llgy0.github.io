@@ -1,6 +1,6 @@
 {
     "title": "Astro",
-    "imgurl": "/assets/images/friends/astro.png",
+    "imgurl": "/assets/images/friends/astro.webp",
     "desc": "感谢博客框架简单易懂，新人也能接受",
     "siteurl": "https://github.com/withastro/astro",
     "tags": ["Framework"]

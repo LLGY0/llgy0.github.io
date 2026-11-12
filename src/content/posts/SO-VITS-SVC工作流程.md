@@ -3,6 +3,7 @@ title: SO-VITS-SVC工作流程
 published: 2026-11-12
 updated: 2026-11-12
 description: 记录SO-VITS-SVC流程
+cover: cover/C5.webp
 category:
   - Study
 tags:

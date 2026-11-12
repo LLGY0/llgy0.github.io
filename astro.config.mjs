@@ -70,7 +70,7 @@ export default defineConfig({
                 "#middle-sidebar",
             ],
             cache: true,
-            preload: true,
+            preload: false, // 关闭预取：国内弱网下预取会抢占首屏带宽
             accessibility: true,
             updateHead: true,
             updateBodyClass: false,

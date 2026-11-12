@@ -25,9 +25,11 @@ const getImageSources = () => {
 
 const imageSources = getImageSources();
 
-// 轮播配置
+// 轮播配置（carousel.enable 为 false 时只渲染首张，避免多张壁纸同时下载）
 const carouselConfig = config.carousel;
-const isCarouselEnabled = imageSources.desktop.length > 1 || imageSources.mobile.length > 1;
+const isCarouselEnabled =
+    carouselConfig?.enable !== false &&
+    (imageSources.desktop.length > 1 || imageSources.mobile.length > 1);
 const carouselInterval = carouselConfig?.interval || 5;
 
 // 样式配置
@@ -90,7 +92,7 @@ const blur = config.fullscreen?.blur || 0;
                 src={imageSources.mobile[0] || imageSources.desktop[0] || ''}
                 position={config.position}
                 style={blur > 0 ? `filter: blur(${blur}px);` : undefined}
-                loading="eager"
+                loading="lazy"
             />
             <ImageWrapper
                 id="fullscreen-wallpaper"
