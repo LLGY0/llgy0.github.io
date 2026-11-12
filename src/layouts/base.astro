@@ -281,7 +281,6 @@ import { initHue } from "@utils/hue";
 import { initMarkdownActions } from "@/utils/markdown";
 import { initFancybox, cleanupFancybox } from "@utils/fancybox";
 import { loadAndInitTranslate } from "@utils/language";
-import { setupParticleEffects } from "@/utils/particle";
 
 
 // 初始化Swup
@@ -519,9 +518,6 @@ initMarkdownActions();
 
 // Initialize translate.js
 loadAndInitTranslate();
-
-// Initialize particle effects
-setupParticleEffects();
 
 // Remove is-loading class and trigger initial-animation after page load
 if (typeof window !== 'undefined') {
